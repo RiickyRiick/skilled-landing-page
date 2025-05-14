@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Kumbh+Sans:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue900: hsl(233, 54%, 16%);
+    --blue600: hsl(234, 25%, 52%);
+
+    --pink600: hsl(341, 92%, 62%);
+    --pink300: hsl(341, 100%, 83%);
+
+    --grey: hsl(232, 10%, 56%);
+
+    --white: hsl(0, 0%, 100%);
+
+    --gradient-pink: linear-gradient(#f02AA6, #FF6F48);
+    --gradient-purple: linear-gradient(#4851FF, #F02AA6);
+}
+
+body {
+    background-color: hsl(240, 75%, 98%);
+    background-image: url(./assets/image-hero-desktop.png);
+    background-repeat: no-repeat;
+    background-position: 130% -160px;
+    background-size: 57vw auto; 
+    font-family: 'Plus jakarta San', sans-serif;
+    font-size: 1rem;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    padding: 0 160px;
+}
+
+/*Nav Section*/
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+.nav-title {
+    font-size: 30px;
+}
+
+/* Navigation Button Hover Effect */
+.nav-btn {
+    background-color: var(--blue900);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    padding: 20px 40px;
+    margin-right: 150px;
+    transition: 
+    background-color 0.4s ease, 
+    cursor 0.4s ease,
+    padding 0.4s ease;
+}
+
+.nav-btn:hover {
+    background-color: var(--blue600);
+    padding: 20px 50px 20px 50px;
+    cursor: pointer;
+}
+
+/* Main Header Section*/
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 544px;
+    margin-top: 174px;
+}
+
+.main-header-title {
+    font-size: 56px;
+    color: var(--blue900);
+    padding-bottom: 25px;
+}
+
+.main-header-description {
+    color: var(--grey);
+    font-size: 18px;
+    line-height: 1.4;
+    width: 440px;
+    padding-bottom: 25px;
+}
+
+/* Main Header Button Hover Effect*/
+.main-header-btn {
+    background-image: var(--gradient-pink);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    width: 168px;
+    padding: 20px 18px;
+    transition: 
+    background-color 0.4s ease, 
+    background-image 0.4s ease,
+    cursor 0.4s ease,
+    padding 0.4s ease;
+}
+
+.main-header-btn:hover {
+    background-image: none;
+    background-image: var(--gradient-purple);
+    padding: 21px 40px;
+    cursor: pointer;
+}
+
+.mobile-img img {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    margin-top: 150px;
+    gap: 70px 40px;
+}
+
+.grid-items {
+    background-color: var(--white);
+    border-radius: 20px;
+    height: 350px;
+    padding: 0 32px;
+}
+
+.grid-items img {
+    position: relative;
+    bottom: 25px;
+}
+
+.text-component {
+    height: 218px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.grid-items p {
+    color: var(--grey);
+    line-height: 1.7;
+    font-size: 18px;
+    font-weight: 300;
+    width: 90%;
+}
+
+.get-started {
+    color: var(--pink600);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.top-leftbox {
+    background-image: var(--gradient-pink);
+    color: var(--white);
+    padding-top: 60px;
+}
+
+.top-leftbox h3 {
+    font-size: 2rem;
+    line-height: 1.5;
+    width: 70%;
+}
+
+/* Footer Section */
+
+.footer-container {
+    background-color: var(--blue900);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    padding: 24px 160px;
+}
+
+.footer-title {
+    font-size: 30px;
+}
+
+button.footer-btn {
+    background-image: var(--gradient-purple);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    padding: 17px 37px;
+    font-weight: 600;
+    transition: 
+    background-color 0.4s ease, 
+    background-image 0.4s ease,
+    cursor 0.4s ease,
+    padding 0.4s ease;
+}
+
+.footer-btn:hover {
+    background-image: none;
+    background-image: var(--gradient-pink);
+    padding: 17px 40px;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 1440px) {
+
+    body {
+        background-position: 175% -140px;
+        background-size: 70vw auto; 
+        }
+}
+
+
+@media only screen and (max-width: 1230px) {
+
+    body {
+        background-position: 230% -130px;
+        background-size: 78vw auto; 
+        }
+
+    .container {
+            width: 100%;
+            padding: 0 90px;
+    }
+
+    .main-header {
+      width: 500px;
+    }    
+
+    .main-header-title {
+        font-size: 45px;
+  }
+
+  .main-header-description {
+    width: 390px;
+  }
+
+  .main-header-btn {
+    padding: 15px 16px;
+  }
+    
+    .grid-container {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+
+    .top-leftbox h3 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+
+    
+}
+
+@media only screen and (max-width: 900px) {
+
+    body {
+        background-position: 480% -55px;
+        background-size: 90vw auto; 
+        }
+
+        .container {
+            
+            padding: 0 50px;
+        }
+
+        .main-header-title {
+            font-size: 33px;
+            width: 270px;
+        }
+
+        .main-header-description {
+            width: 310px;
+        }
+
+        
+}
+
+@media only screen and (max-width: 763px) {
+
+    body {
+        background-image: none;
+    }
+
+    
+    .nav-btn {
+        margin: 0;
+        padding: 14px 36px;
+        transition: 
+        background-color 0.4s ease, 
+        cursor 0.4s ease,
+        padding 0.4s ease;
+    }
+    
+    .nav-btn:hover {
+        padding: 14px 40px;
+        cursor: pointer;
+    }
+
+
+    .main-header {
+        align-items: center;
+        width: 100%;
+        margin-top: 64px;
+    }
+
+
+    .mobile-img {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .mobile-img img {
+        display: block;
+        width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        margin-top: 10px;
+    }
+
+    .footer-container {
+        justify-content: space-between;
+        padding: 24px 15px;
+    }
+
+    .footer-btn {
+        padding: 13px 35px;
+    }
+}
